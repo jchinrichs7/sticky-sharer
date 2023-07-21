@@ -1,0 +1,41 @@
+.carousel-wrapper {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.carousel-container {
+  display: flex;
+  overflow-x: hidden;
+  scroll-snap-type: x mandatory;
+}
+
+.carousel-container > * {
+  flex: 0 0 150px;
+  scroll-snap-align: start;
+  margin-right: 20px;
+}
+
+.carousel-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+.carousel-prev,
+.carousel-next {
+  border: none;
+  background: transparent;
+  font-size: 24px;
+  cursor: pointer;
+  padding: 0 10px;
+}
+
+.carousel-prev::before {
+  content: '←'; /* Left arrow for .carousel-prev */
+  transform: rotate(45deg); /* Rotate the arrow icon for .carousel-prev */
+}
+
+.carousel-next::before {
+  content: '→'; /* Right arrow for .carousel-next */
+  transform: rotate(225deg); /* Rotate the arrow icon for .carousel-next */
+}
